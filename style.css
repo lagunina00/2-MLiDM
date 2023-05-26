@@ -1,0 +1,35 @@
+legend{
+    color:green
+  }
+  h1{
+    color:yellow
+  }
+  html{
+    background-image:url(https://phonoteka.org/uploads/posts/2023-02/1675366307_phonoteka-org-p-oboi-kapibara-na-rabochii-stol-vkontakte-31.jpg);
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-attachment: fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+  }
+  
+  input {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 5px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  p {
+    margin-bottom: 10px;
+    background-color:white;
+    color:green
+  }
