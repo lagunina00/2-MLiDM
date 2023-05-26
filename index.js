@@ -1,29 +1,19 @@
 let error = "";
-function Validation(mass) {
-  let arr = false;
-  if (mass.length > 0) {
-    arr = mass.split(" ");
-    arr = Array.from(new Set(arr));
-    for (let i = 0; i < arr.length; i++) {
-      if (!(arr[i][0] < "A" || arr[i][0] > "z")) {
-        error = "Ошибка при вводе  множества : " + mass + "В элементе" + arr[i];
-        arr = false;
-        break;
-      }
-      if (arr[i][1] % 2 != 0) {
-        error = "Ошибка при вводе множества : " + mass + "В элементе " + arr[i];
-        arr = false;
-        break;
-      }
-      if (arr[i][2] < "A" || arr[i][2] > "z") {
-        error = "Ошибка при вводе множества: " + mass + "В элементе " + arr[i];
-        arr = false;
-        break;
-      }
-      if (arr[i][3] < "A" || arr[i][3] > "z") {
-        error = "Ошибка при вводе множества : " + mass + "В элементе " + arr[i];
-        arr = false;
-        break;
+function validation(mas) {
+  let valid = true;
+  if (mas.length > 0) {
+    let a = mas.split("\n");
+    for (let i = 0; i < a.length; i++) {
+      for (let j = 0; j < a.length; j++) {
+        if (a[i][j] != "1" && a[i][j] != "0") {
+          error = "Должны быть только нули и единицы";
+          valid = false;
+        }
+        if (a.length != a[i].length) {
+          valid = false;
+          error = "должна быть квадратная матрица";
+          valid = false;
+        }
       }
     }
   } else {
